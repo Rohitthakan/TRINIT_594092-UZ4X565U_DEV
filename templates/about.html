@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}Good Causes - About{% endblock title %}
+{% block body %}
+<!-- About Section -->
+ {% comment %} <link rel="stylesheet" href="style.css"> {% endcomment %}
+ <section id="header">
+  <div class="header container">
+      <div class="nav-bar">
+          <div class="brand">
+              <a href="#hero">
+                  <h1><span>GO</span>OD <span>CAU</span>SES</h1>
+              </a>
+          </div>
+          <div class="nav-list">
+              <div class="hamburger">
+                  <div class="bar"></div>
+              </div>
+              <ul>
+                  <li><a href="/" data-after="Home">Home</a></li>
+                  <li><a href="/about" data-after="About">About</a></li>
+                  <li><a href="/services" data-after="Service">Services</a></li>
+                  <li><a href="/contact" data-after="Contact">Contact</a></li>
+                  {% if user.is_authenticated %}
+                    <li><a href="/logout" id="logintab" data-after="Logout">Logout</a></li>
+                  {% else %}
+                    <li><a href="/login" id="logintab" data-after="Login">Login</a></li>
+                  {% endif%}
+              </ul>
+          </div>
+      </div>
+  </div>
+</section>
+ <section id="about">
+    <div class="about container">
+      <div class="col-left">
+        <div class="about-img">
+          <img src="static/pic 8.jpg" alt="img">
+        </div>
+      </div>
+      <div class="col-right">
+        <h1 class="section-title">CONNECT  <span>COLLABORATE </span><span> SUPPORT</span></h1>
+        <h2>We make the future today</h2>
+        <p>Philanthropists and NGOs Connecting is a social impact platform dedicated to connecting individuals and organizations with the resources and opportunities they need to create positive change. Our mission is to make giving and volunteerism more accessible and effective, and to help build a world where everyone has the power to make a difference.</p>
+        
+      </div>
+    </div>
+  </section>
+
+{% endblock body %}
